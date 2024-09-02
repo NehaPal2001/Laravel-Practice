@@ -14,8 +14,6 @@ class ContactUs extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
-
-
     /**
      * Create a new message instance.
      */
@@ -27,11 +25,12 @@ class ContactUs extends Mailable
     /**
      * Get the message envelope.
      */
+
     public function envelope(): Envelope
     {
         return new Envelope(
             subject: 'Contact Us',
-            from: new Address('nehapalsdett@gmail.com','Acme Media'),
+            from: new Address('nehapalsdett@gmail.com')
         );
     }
 
